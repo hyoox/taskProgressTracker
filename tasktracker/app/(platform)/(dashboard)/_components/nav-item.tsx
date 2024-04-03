@@ -1,14 +1,20 @@
 "use client";
 
-import {
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { Activity, CreditCard, Layout, Settings } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
+import {
+  Activity,
+  CreditCard,
+  Layout,
+  Settings,
+} from "lucide-react";
+
+import { cn } from "@/lib/utils";
+import { 
+  AccordionContent,
+  AccordionItem, 
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -24,7 +30,7 @@ interface NavItemProps {
   isActive: boolean;
   organization: Organization;
   onExpand: (id: string) => void;
-}
+};
 
 export const NavItem = ({
   isExpanded,
@@ -34,6 +40,7 @@ export const NavItem = ({
 }: NavItemProps) => {
   const router = useRouter();
   const pathname = usePathname();
+
   const routes = [
     {
       label: "Boards",
@@ -60,8 +67,12 @@ export const NavItem = ({
   const onClick = (href: string) => {
     router.push(href);
   };
+
   return (
-    <AccordionItem value={organization.id} className="border-none">
+    <AccordionItem
+      value={organization.id}
+      className="border-none"
+    >
       <AccordionTrigger
         onClick={() => onExpand(organization.id)}
         className={cn(
@@ -78,7 +89,9 @@ export const NavItem = ({
               className="rounded-sm object-cover"
             />
           </div>
-          <span className="font-medium text-sm">{organization.name}</span>
+          <span className="font-medium text-sm">
+            {organization.name}
+          </span>
         </div>
       </AccordionTrigger>
       <AccordionContent className="pt-1 text-neutral-700">
@@ -112,5 +125,3 @@ NavItem.Skeleton = function SkeletonNavItem() {
     </div>
   );
 };
-
-export default NavItem;
