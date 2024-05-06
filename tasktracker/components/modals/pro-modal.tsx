@@ -32,11 +32,9 @@ export const ProModal = () => {
           <Image src="/hero.svg" alt="Hero" className="object-cover" fill />
         </div>
         <div className="text-neutral-700 mx-auto space-y-6 p-6">
-          <h2 className="font-semibold text-xl">
-            Upgrade to Task Progress Tracker Pro Today!
-          </h2>
+          <h2 className="font-semibold text-xl">Upgrade to Pro Version</h2>
           <p className="text-xs font-semibold text-neutral-600">
-            Explore the best of Task Progress Tracker
+            Explore unlimited features of Task Progress Tracker
           </p>
           <div className="pl-3">
             <ul className="text-sm list-disc">
