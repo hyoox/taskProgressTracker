@@ -46,7 +46,7 @@ const MarketingPage = () => {
         accomplish it all with Task Progress Tracker.
       </div>
       <Button className="mt-6" size="lg" asChild>
-        <Link href="/sign-up">Get Task Progress Tracker for free</Link>
+        <Link href="/sign-up">Sign Up to Task Progress Tracker</Link>
       </Button>
     </div>
   );
